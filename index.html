@@ -120,10 +120,10 @@
         
         <button onclick="exportSite()" class="cat-btn" style="background: var(--n-red); border:none;">💾 حفظ ونسخ</button>
     </div>
-    <div class="netflix-logo">MY TV ULTIMATE</div>
+    <div class="netflix-logo">MY TV </div>
     
     <div style="display:flex; justify-content:center; gap:15px; margin-bottom:10px;">
-        <div id="live-clock" style="color: var(--primary); font-weight: bold;">⏱ 12:12:28</div>
+        <div id="live-clock" style="color: var(--primary); font-weight: bold;">⏱ 12:20:33</div>
         <button onclick="toggleTopNav()" style="background:none; border:none; color:#888; cursor:pointer;">[ إخفاء الأدوات ]</button>
     </div>
     <div style="position:relative; width:80%; max-width:500px; margin: 0 auto;">
@@ -139,20 +139,20 @@
             </div>
             <div style="display:flex; align-items:center; gap:15px; direction: ltr;">
                 <button onclick="playNext()" style="background: none; border: medium; color: rgb(255, 255, 255); font-size: 22px; cursor: pointer; transition: 0.2s;" onmouseover="this.style.color='var(--n-red)'" onmouseout="this.style.color='#fff'" title="القناة التالية">⏭</button>
-                <h3 id="now-playing" style="margin:0; font-size: 16px; direction: rtl;">Thmanya 1</h3>
-                <button onclick="playPrev()" style="background:none; border:none; color:#fff; font-size:22px; cursor:pointer; transition:0.2s;" onmouseover="this.style.color='var(--n-red)'" onmouseout="this.style.color='#fff'" title="القناة السابقة">⏮</button>
+                <h3 id="now-playing" style="margin:0; font-size: 16px; direction: rtl;">متعدد beIN 2 عمر</h3>
+                <button onclick="playPrev()" style="background: none; border: medium; color: rgb(255, 255, 255); font-size: 22px; cursor: pointer; transition: 0.2s;" onmouseover="this.style.color='var(--n-red)'" onmouseout="this.style.color='#fff'" title="القناة السابقة">⏮</button>
             </div>
         </div>
         
         <div style="position: relative; width: 100%; display: flex; flex-direction: column;">
             <div class="player-overlay">
                 <div style="height: 20px;"></div> 
-                <div class="center-controls" id="center-controls" style="display: flex;">
+                <div class="center-controls" id="center-controls" style="display: none;">
                     <button onclick="skip(-10)" title="تأخير 10 ثواني">⏪</button>
                     <button id="play-pause" onclick="togglePlay()" title="تشغيل / إيقاف">▶</button>
                     <button onclick="skip(10)" title="تقديم 10 ثواني">⏩</button>
                 </div>
-                <div class="bottom-controls" id="bottom-controls" style="padding: 15px; display: block;">
+                <div class="bottom-controls" id="bottom-controls" style="padding: 15px; display: none;">
                     <input type="range" id="seek-bar" value="0" step="0.1">
                     <div style="display:flex; justify-content: space-between; margin-top:5px;">
                         <div>
@@ -163,8 +163,8 @@
                     </div>
                 </div>
             </div>
-            <video id="main-video" autoplay="" playsinline="" class="" src="blob:null/a6401b6d-f030-4c54-a116-7b1da43453a9"></video>
-            <iframe id="main-iframe" class="hidden" allow="autoplay; fullscreen; encrypted-media" allowfullscreen="" frameborder="0" src=""></iframe>
+            <video id="main-video" autoplay="" playsinline="" class="hidden" src="blob:null/a6401b6d-f030-4c54-a116-7b1da43453a9"></video>
+            <iframe id="main-iframe" class="" allow="autoplay; fullscreen; encrypted-media" allowfullscreen="" frameborder="0" src=""></iframe>
         </div>
     </div>
 
