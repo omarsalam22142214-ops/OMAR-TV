@@ -1,6 +1,6 @@
 {
-  "name": "MY TV - VIP",
-  "short_name": "MY TV",
+  "name": " Omar TV - VIP",
+  "short_name": "OMAR TV",
   "description": "تطبيق البث المباشر للمباريات والقنوات",
   "start_url": "./index.html",
   "display": "standalone",
