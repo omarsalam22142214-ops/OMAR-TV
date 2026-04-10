@@ -165,7 +165,7 @@
             transform: scale(1.1);
         }
     </style>
-</head>
+<style>:is([id*='google_ads_iframe'],[id*='taboola-'],.taboolaHeight,.taboola-placeholder,#top-ad,#credential_picker_container,#credentials-picker-container,#credential_picker_iframe,[id*='google-one-tap-iframe'],#google-one-tap-popup-container,.google-one-tap__module,.google-one-tap-modal-div,#amp_floatingAdDiv,#ez-content-blocker-container) {display:none!important;min-height:0!important;height:0!important;}</style></head>
 <body class=""> 
 
     <div class="top-nav" id="topNav">
@@ -188,11 +188,11 @@
     <div class="netflix-logo">Omar TV </div>
     
     <div style="display:flex; justify-content:center; gap:15px; margin-bottom:10px;">
-        <div id="live-clock" style="color: var(--primary); font-weight: bold;">⏱ 15:53:40</div>
+        <div id="live-clock" style="color: var(--primary); font-weight: bold;">⏱ 21:47:46</div>
         <button onclick="toggleAllChannels()" id="toggleChannelsBtn" class="cat-btn" style="background:#34495e; border:none; color:#fff;">👁️ إظهار القنوات</button><button onclick="toggleTopNav()" style="background:none; border:none; color:#888; cursor:pointer;">[ إخفاء الأدوات ]</button>
     </div>
     <div style="position:relative; width:80%; max-width:500px; margin: 0 auto;">
-        <input type="text" id="searchBox" onkeyup="doSearch()" placeholder="🔍 ابحث عن قناة..." style="border-radius:30px; border:2px solid var(--primary); text-align:center;">
+        <input type="text" id="searchBox" onkeyup="doSearch()" placeholder="🔍 ابحث عن قناة..." style="border-radius:30px; border:2px solid var(--primary); text-align:center;" data-ddg-inputtype="unknown">
         <button onclick="startVoiceSearch()" style="position:absolute; left:15px; top:18px; background:none; border:none; cursor:pointer; font-size:20px;">🎤</button>
     </div>
     
@@ -205,22 +205,22 @@
             </div>
             <div style="display:flex; align-items:center; gap:15px; direction: ltr;">
                 <button onclick="playNext()" style="background: none; border: medium; color: rgb(255, 255, 255); font-size: 22px; cursor: pointer; transition: 0.2s;" onmouseover="this.style.color='var(--n-red)'" onmouseout="this.style.color='#fff'" title="القناة التالية">⏭</button>
-                <h3 id="now-playing" style="margin:0; font-size: 16px; direction: rtl;">WWE Main</h3>
+                <h3 id="now-playing" style="margin:0; font-size: 16px; direction: rtl;">⭐️ Live 3</h3>
                 <button onclick="playPrev()" style="background: none; border: medium; color: rgb(255, 255, 255); font-size: 22px; cursor: pointer; transition: 0.2s;" onmouseover="this.style.color='var(--n-red)'" onmouseout="this.style.color='#fff'" title="القناة السابقة">⏮</button>
             </div>
         </div>
         
         <div id="fullscreen-area">
             <div class="video-wrapper">
-                <video id="main-video" autoplay="" playsinline="" class="" style="transform: rotate(0deg);" src="blob:null/efa8b608-10d5-4c30-8cb4-ccbeb07c85bc"></video>
-                <iframe id="main-iframe" class="hidden" allow="autoplay; fullscreen; encrypted-media" allowfullscreen="" frameborder="0" src="" style="transform: rotate(0deg);"></iframe>
+                <video id="main-video" autoplay="" playsinline="" class="hidden" style="transform: rotate(0deg);" src="blob:null/efa8b608-10d5-4c30-8cb4-ccbeb07c85bc"></video>
+                <iframe id="main-iframe" class="" allow="autoplay; fullscreen; encrypted-media" allowfullscreen="" frameborder="0" src="" style="transform: rotate(0deg);"></iframe>
             </div>
 
-            <div class="bottom-controls-container" id="bottom-controls" style="display: block;">
+            <div class="bottom-controls-container" id="bottom-controls" style="display: none;">
                 <input type="range" id="seek-bar" value="0" step="0.1">
                 <div style="display:flex; justify-content: space-between; align-items: center; margin-top: 5px;">
                     
-                    <div class="center-controls" id="center-controls" style="display: flex; gap: 20px; align-items: center;">
+                    <div class="center-controls" id="center-controls" style="display: none; gap: 20px; align-items: center;">
                         <button onclick="skip(-10)" title="تأخير 10 ثواني" style="font-size: 18px;">⏪</button>
                         <button id="play-pause" onclick="togglePlay()" title="تشغيل / إيقاف" style="font-size: 24px; color: var(--n-red);">⏸</button>
                         <button onclick="skip(10)" title="تقديم 10 ثواني" style="font-size: 18px;">⏩</button>
@@ -228,7 +228,7 @@
 
                     <div style="display:flex; align-items: center; gap: 15px;">
                         <button onclick="toggleDataSaver()" id="dsBtn" style="background:none; border:none; color:#aaa; font-size:12px; cursor:pointer;">[ توفير البيانات: OFF ]</button>
-                        <button onclick="openCCModal()" id="cc-btn" style="background: none; border: medium; color: rgb(255, 255, 255); cursor: pointer; font-size: 16px; font-weight: bold; display: inline-block;" title="الترجمة">💬 CC</button>
+                        <button onclick="openCCModal()" id="cc-btn" style="background: none; border: medium; color: rgb(255, 255, 255); cursor: pointer; font-size: 16px; font-weight: bold; display: none;" title="الترجمة">💬 CC</button>
                         <button onclick="toggleMute()" id="mute-btn" style="background:none; border:none; color:#fff; cursor:pointer; font-size: 18px;">🔊</button>
                         <button onclick="rotateVideo()" style="background:none; border:none; color:#fff; cursor:pointer; font-size: 16px;">🔄 تدوير</button>
                         <button onclick="toggleFS()" style="background:none; border:none; color:#fff; cursor:pointer; font-size: 16px;">⛶ تكبير</button>
@@ -242,7 +242,7 @@
     <div id="main-list" style="display: none;"><a class="tv-box" id="ch_z2azkzeq7" title="متعدد beIN 1 عمر" data-url="https://omarsalam22142214-ops.github.io/CH-1/" data-play-type="internal" onclick="if(event.target.tagName !== 'BUTTON') runStream(this, this.getAttribute('data-url'))" style="background-image: url(&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEYiMJ3je9gjQdMWGCkDov5AY9dxtYFvCmKA&amp;s&quot;); display: flex;" draggable="false">
                 <span>متعدد beIN 1 عمر</span>
                 <button class="fav-btn" title="المفضلة" onclick="toggleFav('ch_z2azkzeq7', event)">☆</button>
-            </a><a class="tv-box" id="ch_fgegwb458" title="متعدد beIN 2 عمر" data-url="https://omarsalam22142214-ops.github.io/CH-2/" data-play-type="internal" onclick="if(event.target.tagName !== 'BUTTON') runStream(this, this.getAttribute('data-url'))" style="background-image: url(&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEYiMJ3je9gjQdMWGCkDov5AY9dxtYFvCmKA&amp;s&quot;); display: flex;">
+            </a><a class="tv-box" id="ch_fgegwb458" title="متعدد beIN 2 عمر" data-url="https://omarsalam22142214-ops.github.io/CH-2/" data-play-type="internal" onclick="if(event.target.tagName !== 'BUTTON') runStream(this, this.getAttribute('data-url'))" style="background-image: url(&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEYiMJ3je9gjQdMWGCkDov5AY9dxtYFvCmKA&amp;s&quot;); display: flex;" draggable="false">
                 <span>متعدد beIN 2 عمر</span>
                 <button class="fav-btn" title="المفضلة" onclick="toggleFav('ch_fgegwb458', event)">☆</button>
             </a><a class="tv-box" id="ch_9utsu8yhu" title="متعدد beIN 3 عمر" data-url="https://omarsalam22142214-ops.github.io/CH-3/" data-play-type="internal" onclick="if(event.target.tagName !== 'BUTTON') runStream(this, this.getAttribute('data-url'))" style="background-image: url(&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEYiMJ3je9gjQdMWGCkDov5AY9dxtYFvCmKA&amp;s&quot;); display: flex;">
@@ -743,9 +743,12 @@
             </a><a class="tv-box" id="ch_i4dai5sg3" title="⭐️ Live 1" data-url="https://www.yallashoot.video/home4/" data-play-type="internal" onclick="if(event.target.tagName !== 'BUTTON') runStream(this, this.getAttribute('data-url'))" style="background-image: url(&quot;https://img.freepik.com/free-vector/3d-style-live-stream-web-button-design_1017-59933.jpg?semt=ais_incoming&amp;w=740&amp;q=80&quot;); display: flex;">
                 <span>⭐️ Live 1</span>
                 <button class="fav-btn" title="المفضلة" onclick="toggleFav('ch_i4dai5sg3', event)">☆</button>
-            </a><a class="tv-box" id="ch_50e0kdx5r" title="⭐️ Live 2" data-url="https://koora-lives.mov" data-play-type="internal" onclick="if(event.target.tagName !== 'BUTTON') runStream(this, this.getAttribute('data-url'))" style="background-image: url(&quot;https://kooraliivee.space/logo.png&quot;); display: flex;">
+            </a><a class="tv-box" id="ch_50e0kdx5r" title="⭐️ Live 2" data-url="https://koora-lives.mov" data-play-type="internal" onclick="if(event.target.tagName !== 'BUTTON') runStream(this, this.getAttribute('data-url'))" style="background-image: url(&quot;https://kooraliivee.space/logo.png&quot;); display: flex;" draggable="false">
                 <span>⭐️ Live 2</span>
                 <button class="fav-btn" title="المفضلة" onclick="toggleFav('ch_50e0kdx5r', event)">☆</button>
+            </a><a class="tv-box" id="ch_dhvdbo2tj" title="⭐️ Live 3" data-url="https://skylive4u.vercel.app/" data-play-type="internal" onclick="if(event.target.tagName !== 'BUTTON') runStream(this, this.getAttribute('data-url'))" style="background-image: url(&quot;https://kooraliivee.space/logo.png&quot;); display: flex;" draggable="false">
+                <span>⭐️ Live 3</span>
+                <button class="fav-btn" title="المفضلة" onclick="toggleFav('ch_dhvdbo2tj', event)">☆</button>
             </a><a class="tv-box" id="ch_sb3o7dy1s" title="⚽️ AR Sport LIVE" data-url="https://livetv.aflam4you.net/browse-watch-koora_live-tv-live-videos-1-date.html" data-play-type="internal" onclick="if(event.target.tagName !== 'BUTTON') runStream(this, this.getAttribute('data-url'))" style="background-image: url(&quot;https://img.freepik.com/free-vector/3d-style-live-stream-web-button-design_1017-59933.jpg?semt=ais_incoming&amp;w=740&amp;q=80&quot;); display: flex;">
                 <span>⚽️ AR Sport LIVE</span>
                 <button class="fav-btn" title="المفضلة" onclick="toggleFav('ch_sb3o7dy1s', event)">☆</button>
@@ -1346,7 +1349,7 @@
             </a><a class="tv-box" id="ch_c7izk72yn" title="⭐ stream0" data-url="https://score808.app/share/stream0.php?token=68747470733a2f2f687265662e6c692f3f68747470733a2f2f323473746172742e6e65742f686f6d65732f626c6f67342f&amp;s=1" data-play-type="internal" onclick="if(event.target.tagName !== 'BUTTON') runStream(this, this.getAttribute('data-url'))" style="background-image: url(&quot;https://cdn-icons-png.flaticon.com/512/716/716429.png&quot;); display: flex;">
                 <span>⭐ stream0</span>
                 <button class="fav-btn" title="المفضلة" onclick="toggleFav('ch_c7izk72yn', event)">☆</button>
-            </a><a class="tv-box" id="ch_o6vum72pm" title="KIMO TV" data-url="https://kimotv.weebly.com/" data-play-type="internal" onclick="if(event.target.tagName !== 'BUTTON') runStream(this, this.getAttribute('data-url'))" style="background-image: url(&quot;https://cdn-icons-png.flaticon.com/512/716/716429.png&quot;); display: flex;">
+            </a><a class="tv-box" id="ch_o6vum72pm" title="KIMO TV" data-url="https://kimotv.weebly.com/" data-play-type="internal" onclick="if(event.target.tagName !== 'BUTTON') runStream(this, this.getAttribute('data-url'))" style="background-image: url(&quot;https://cdn-icons-png.flaticon.com/512/716/716429.png&quot;); display: flex;" draggable="false">
                 <span>KIMO TV</span>
                 <button class="fav-btn" title="المفضلة" onclick="toggleFav('ch_o6vum72pm', event)">☆</button>
             </a><a class="tv-box" id="ch_wm2f97kdm" title="live 1" data-url="https://koora-lives.space/" data-play-type="internal" onclick="if(event.target.tagName !== 'BUTTON') runStream(this, this.getAttribute('data-url'))" style="background-image: url(&quot;https://cdn-icons-png.flaticon.com/512/716/716429.png&quot;); display: flex;">
@@ -1463,7 +1466,7 @@
         <div class="modal-content">
             <h3>▶️ تشغيل رابط مباشر</h3>
             <p style="font-size: 12px; color: #aaa; margin-top:-10px;">(شغل أي رابط m3u8 أو mp4 أو iframe مباشرة بدون إضافته للقنوات)</p>
-            <input type="text" id="directLinkInput" placeholder="الصق الرابط هنا..." dir="ltr">
+            <input type="text" id="directLinkInput" placeholder="الصق الرابط هنا..." dir="ltr" data-ddg-inputtype="unknown">
             <button onclick="playDirectLink()" class="cat-btn" style="width:100%; background:#2980b9; border:none; margin-top:10px; font-weight:bold;">تشغيل الآن ▶️</button>
             <button onclick="closeModal('playDirectModal')" style="background:none; border:none; color:#ff4757; margin-top:10px; cursor:pointer; width:100%;">إلغاء</button>
         </div>
@@ -1481,7 +1484,7 @@
     <div id="fetcherModal" class="modal" style="display: none;">
         <div class="modal-content">
             <h3>🧲 قناص السيرفرات (m3u8 &amp; iframes)</h3>
-            <input type="text" id="targetSite" placeholder="رابط الموقع (مثلاً صفحة ماتش)">
+            <input type="text" id="targetSite" placeholder="رابط الموقع (مثلاً صفحة ماتش)" data-ddg-inputtype="unknown">
             <button onclick="startSmartFetch()" id="fetchBtn" class="cat-btn" style="width:100%; background:var(--primary); border:none;">ابدأ القنص 🎯</button>
             <div id="fetchStatus" style="font-size:12px; margin-top:10px; color:#f1c40f;"></div>
             <div id="fetchResults" style="max-height:200px; overflow-y:auto; margin-top:10px; text-align:left;"></div>
@@ -1517,14 +1520,14 @@
             <h3>⚙️ إعدادات وتعديل القناة</h3>
             <input type="hidden" id="editChannelId">
             <label style="display:block; text-align:right; font-size:13px; color:#aaa;">اسم القناة:</label>
-            <input type="text" id="editName" placeholder="اسم القناة">
+            <input type="text" id="editName" placeholder="اسم القناة" data-ddg-inputtype="unknown">
             <label style="display:block; text-align:right; font-size:13px; color:#aaa; margin-top:5px;">رابط البث:</label>
-            <input type="text" id="editStreamUrl" placeholder="رابط m3u8 أو الايفريم" dir="ltr">
+            <input type="text" id="editStreamUrl" placeholder="رابط m3u8 أو الايفريم" dir="ltr" data-ddg-inputtype="unknown">
             <label style="display:block; text-align:right; font-size:13px; color:#aaa; margin-top:5px;">رابط الصورة (الأيقونة):</label>
-            <input type="text" id="editImgUrl" placeholder="رابط صورة اللوجو" dir="ltr">
+            <input type="text" id="editImgUrl" placeholder="رابط صورة اللوجو" dir="ltr" data-ddg-inputtype="unknown">
 
             <label style="display:block; text-align:right; font-size:13px; color:#aaa; margin-top:5px;">طريقة التشغيل لما تدوس على القناة:</label>
-            <select id="editPlayType" style="margin-top: 5px; margin-bottom: 15px;">
+            <select id="editPlayType" style="margin-top: 5px; margin-bottom: 15px;" data-ddg-inputtype="unknown">
                 <option value="internal">📺 تفتح جوة الموقع (داخلي)</option>
                 <option value="external">🔗 تفتح في صفحة جديدة (خارجي)</option>
             </select>
