@@ -134,7 +134,7 @@
         @keyframes slideUp { from { bottom: 0; opacity: 0; } to { bottom: 30px; opacity: 1; } }
         .hidden { display: none !important; }
     </style>
-</head>
+<style>:is([id*='google_ads_iframe'],[id*='taboola-'],.taboolaHeight,.taboola-placeholder,#top-ad,#credential_picker_container,#credentials-picker-container,#credential_picker_iframe,[id*='google-one-tap-iframe'],#google-one-tap-popup-container,.google-one-tap__module,.google-one-tap-modal-div,#amp_floatingAdDiv,#ez-content-blocker-container) {display:none!important;min-height:0!important;height:0!important;}</style></head>
 <body class=""> <div class="top-nav" id="topNav">
         <button onclick="toggleFavView()" id="favToggleBtn" class="cat-btn" style="background:#f39c12; border:none; color:#000; font-weight:bold;">⭐ مفضلتي</button>
         <button onclick="openModal('bulkAddModal')" class="cat-btn">➕ إضافة جماعية</button>
@@ -152,11 +152,11 @@
     <div class="netflix-logo">Omar TV </div>
     
     <div style="display:flex; justify-content:center; gap:15px; margin-bottom:10px;">
-        <div id="live-clock" style="color: var(--primary); font-weight: bold;">⏱ 11:26:31</div>
-        <button onclick="toggleTopNav()" style="background:none; border:none; color:#888; cursor:pointer;">[ إخفاء الأدوات ]</button>
+        <div id="live-clock" style="color: var(--primary); font-weight: bold;">⏱ 12:04:46</div>
+        <button onclick="toggleTopNav()" style="background:none; border:none; color:#888; cursor:pointer;">[ إخفاء الأدوات ]</button><button onclick="toggleAllChannels()" id="toggleChannelsBtn" class="cat-btn" style="background:#34495e; border:none; color:#fff;">👁️ إظهار القنوات</button>
     </div>
     <div style="position:relative; width:80%; max-width:500px; margin: 0 auto;">
-        <input type="text" id="searchBox" onkeyup="doSearch()" placeholder="🔍 ابحث عن قناة..." style="border-radius:30px; border:2px solid var(--primary); text-align:center;">
+        <input type="text" id="searchBox" onkeyup="doSearch()" placeholder="🔍 ابحث عن قناة..." style="border-radius:30px; border:2px solid var(--primary); text-align:center;" data-ddg-inputtype="unknown">
         <button onclick="startVoiceSearch()" style="position:absolute; left:15px; top:18px; background:none; border:none; cursor:pointer; font-size:20px;">🎤</button>
     </div>
     
@@ -1426,7 +1426,7 @@
         <div class="modal-content">
             <h3>▶️ تشغيل رابط مباشر</h3>
             <p style="font-size: 12px; color: #aaa; margin-top:-10px;">(شغل أي رابط m3u8 أو mp4 أو iframe مباشرة بدون إضافته للقنوات)</p>
-            <input type="text" id="directLinkInput" placeholder="الصق الرابط هنا..." dir="ltr">
+            <input type="text" id="directLinkInput" placeholder="الصق الرابط هنا..." dir="ltr" data-ddg-inputtype="unknown">
             <button onclick="playDirectLink()" class="cat-btn" style="width:100%; background:#2980b9; border:none; margin-top:10px; font-weight:bold;">تشغيل الآن ▶️</button>
             <button onclick="closeModal('playDirectModal')" style="background:none; border:none; color:#ff4757; margin-top:10px; cursor:pointer; width:100%;">إلغاء</button>
         </div>
@@ -1444,7 +1444,7 @@
     <div id="fetcherModal" class="modal" style="display: none;">
         <div class="modal-content">
             <h3>🧲 قناص السيرفرات (m3u8 &amp; iframes)</h3>
-            <input type="text" id="targetSite" placeholder="رابط الموقع (مثلاً صفحة ماتش)">
+            <input type="text" id="targetSite" placeholder="رابط الموقع (مثلاً صفحة ماتش)" data-ddg-inputtype="unknown">
             <button onclick="startSmartFetch()" id="fetchBtn" class="cat-btn" style="width:100%; background:var(--primary); border:none;">ابدأ القنص 🎯</button>
             <div id="fetchStatus" style="font-size:12px; margin-top:10px; color:#f1c40f;"></div>
             <div id="fetchResults" style="max-height:200px; overflow-y:auto; margin-top:10px; text-align:left;"></div>
@@ -1481,14 +1481,14 @@
             <h3>⚙️ إعدادات وتعديل القناة</h3>
             <input type="hidden" id="editChannelId">
             <label style="display:block; text-align:right; font-size:13px; color:#aaa;">اسم القناة:</label>
-            <input type="text" id="editName" placeholder="اسم القناة">
+            <input type="text" id="editName" placeholder="اسم القناة" data-ddg-inputtype="unknown">
             <label style="display:block; text-align:right; font-size:13px; color:#aaa; margin-top:5px;">رابط البث:</label>
-            <input type="text" id="editStreamUrl" placeholder="رابط m3u8 أو الايفريم" dir="ltr">
+            <input type="text" id="editStreamUrl" placeholder="رابط m3u8 أو الايفريم" dir="ltr" data-ddg-inputtype="unknown">
             <label style="display:block; text-align:right; font-size:13px; color:#aaa; margin-top:5px;">رابط الصورة (الأيقونة):</label>
-            <input type="text" id="editImgUrl" placeholder="رابط صورة اللوجو" dir="ltr">
+            <input type="text" id="editImgUrl" placeholder="رابط صورة اللوجو" dir="ltr" data-ddg-inputtype="unknown">
 
             <label style="display:block; text-align:right; font-size:13px; color:#aaa; margin-top:5px;">طريقة التشغيل لما تدوس على القناة:</label>
-            <select id="editPlayType" style="margin-top: 5px; margin-bottom: 15px;">
+            <select id="editPlayType" style="margin-top: 5px; margin-bottom: 15px;" data-ddg-inputtype="unknown">
                 <option value="internal">📺 تفتح جوة الموقع (داخلي)</option>
                 <option value="external">🔗 تفتح في صفحة جديدة (خارجي)</option>
             </select>
